@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autosearch on Input change using fetch</title>
+    <style>
+        .card {
+            border: 1px solid #222;
+            padding: .25rem;
+            margin: 15px 0;
+            width: 225px;
+        }
+        .card .heading {
+            font-size: 26px;
+            font-weight: 700;
+        }
+        .card .items-body {
+            font-size: 18px;
+        }
+        label{
+            display: block;
+        }
+        .hide {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="sub-body">
+            <label for="searchBar">Search Users</label>
+            <input type="search" id="searchBar" placeholder="Type here for Search" data-search-input/>
+            <button type="button">Search</button>
+            </div>
+            <div class="items-list">
+                
+            </div>
+            <template data-users-template>
+                <div class="card" data-user-card>
+                    <div class="heading" data-user-heading>
+                    </div>
+                    <div class="items-body" data-user-body>
+                    </div>
+                </div>
+            </template>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
